@@ -1,26 +1,38 @@
 #include <stdio.h>
 
-int main()
+void fib(int n)
 {
-    // 0, 1, 1,2,3,5,8,11...
-    printf("Enter the number of Fibonacci numbers to generate: ");
-    printf("\n");
-    int count;
-    scanf("%d", &count);
-    for (int i = 0; i < count; i++)
+    if (n < 1)
     {
-        if (i == 0)
+        printf("invalid number");
+        return;
+    }
+
+    int prev1 = 1;
+    int prev2 = 0;
+
+    for (int i = 1; i <= n; i++)
+    {
+        if (i > 2)
         {
-            printf("%d", 0);
+            int curr = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = curr;
+            printf(" %d", curr);
         }
-        if (i == 1)
+        else if (i == 1)
         {
-            printf("%d", 1);
+            printf("%d", prev2);
         }
-        if (i > 0)
+        else if (i == 2)
         {
-            int n = (i - 1) + (i + 2);
-            printf(" %d ", n);
+            printf(" %d", prev1);
         }
     }
+}
+
+int main()
+{
+    fib(9);
+    return 0;
 }
