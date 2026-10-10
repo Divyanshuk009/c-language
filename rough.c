@@ -3,10 +3,10 @@
 int main()
 {
 
-    for (int i = 0; i <= 5; i++)
+    for (int i = 5; i >= 1; i--)
     {
         int k = i;
-        for (int j = 0; j <= 5; j++)
+        for (int j = i; j >= 1; j--)
         {
             printf("%d", j);
         }
