@@ -3,9 +3,9 @@
 
 int main()
 {
-    char st[] = "hello";
+    char sd[] = "hello";
     int count = 0;
-    for (int i = 0; i < sizeof(st); i++)
+    for (int i = 0; i < sizeof(sd); i++)
     {
         count++;
     }
